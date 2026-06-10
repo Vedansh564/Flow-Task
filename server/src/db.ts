@@ -7,7 +7,7 @@ let dbInstance: Database | null = null;
 export async function initDb(): Promise<Database> {
   if (dbInstance) return dbInstance;
 
-  const dbPath = path.resolve(__dirname, '../../tasks.db');
+  const dbPath = process.env.DATABASE_PATH || path.resolve(__dirname, '../../tasks.db');
 
   dbInstance = await open({
     filename: dbPath,

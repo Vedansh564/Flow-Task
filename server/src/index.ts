@@ -177,9 +177,15 @@ app.delete('/tasks/:id', async (req: Request, res: Response, next: NextFunction)
   }
 });
 
-// Root route
-app.get('/', (req, res) => {
-  res.json({ message: 'Personal Task Manager API is running.' });
+import path from 'path';
+
+// Serve React static files
+const clientDistPath = path.resolve(__dirname, '../../client/dist');
+app.use(express.static(clientDistPath));
+
+// Catch-all route to serve the React application for any frontend routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientDistPath, 'index.html'));
 });
 
 // Centralized error handling middleware
