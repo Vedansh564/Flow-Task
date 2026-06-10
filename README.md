@@ -2,6 +2,10 @@
 
 FlowTask is a premium, glassmorphic Personal Task Manager built with React (Vite), Node.js (Express), TypeScript, SQLite, and Tailwind CSS. The project is organized as a single monorepo to streamline backend development, database storage, and front-end user experience in a cohesive workspace.
 
+### 🚀 Deployed Links
+- **Frontend Dashboard (Vercel):** [https://flow-task-tau.vercel.app](https://flow-task-tau.vercel.app)
+- **Backend API Server (Render):** [https://flow-task-m38a.onrender.com](https://flow-task-m38a.onrender.com)
+
 ---
 
 ## ⚡ Tech Stack
