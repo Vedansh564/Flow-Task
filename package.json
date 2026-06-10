@@ -1,0 +1,14 @@
+{
+  "name": "personal-task-manager-monorepo",
+  "version": "1.0.0",
+  "description": "Personal Task Manager Monorepo (Client and Server)",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "start": "concurrently \"npm run start --prefix server\" \"npm run preview --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
